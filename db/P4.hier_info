@@ -1,0 +1,30 @@
+|P4
+clk => pulsaf.CLK
+clk => q[0].CLK
+clk => q[1].CLK
+clk => fin_de_cuenta~reg0.CLK
+clk => cuenta[0].CLK
+clk => cuenta[1].CLK
+clk => cuenta[2].CLK
+clk => e_actual.IN1
+reset => pulsaf.OUTPUTSELECT
+reset => q[0].ACLR
+reset => q[1].ACLR
+reset => fin_de_cuenta.OUTPUTSELECT
+reset => cuenta[0].ACLR
+reset => cuenta[1].ACLR
+reset => cuenta[2].ACLR
+reset => e_actual.IN1
+pulsador_f => ~NO_FANOUT~
+f => ~NO_FANOUT~
+pulsador => q[1].DATAIN
+fin_de_cuenta <= fin_de_cuenta~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rojo <= rojo.DB_MAX_OUTPUT_PORT_TYPE
+ambar <= ambar.DB_MAX_OUTPUT_PORT_TYPE
+verde <= verde.DB_MAX_OUTPUT_PORT_TYPE
+enable => ~NO_FANOUT~
+cuenta_s[0] <= cuenta[0].DB_MAX_OUTPUT_PORT_TYPE
+cuenta_s[1] <= cuenta[1].DB_MAX_OUTPUT_PORT_TYPE
+cuenta_s[2] <= cuenta[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
