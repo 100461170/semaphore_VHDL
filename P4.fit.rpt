@@ -1,0 +1,386 @@
+Fitter report for P4
+Wed May 04 10:09:09 2022
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. I/O Standard
+ 11. Dedicated Inputs I/O
+ 12. Output Pin Default Load For Reported TCO
+ 13. Fitter Resource Utilization by Entity
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Interconnect Usage Summary
+ 18. LAB Macrocells
+ 19. Parallel Expander
+ 20. Logic Cell Interconnection
+ 21. Fitter Device Options
+ 22. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------+
+; Fitter Summary                                                       ;
++-----------------------+----------------------------------------------+
+; Fitter Status         ; Successful - Wed May 04 10:09:09 2022        ;
+; Quartus II Version    ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name         ; P4                                           ;
+; Top-level Entity Name ; P4                                           ;
+; Family                ; MAX7000S                                     ;
+; Device                ; EPM7064SLC44-10                              ;
+; Timing Models         ; Final                                        ;
+; Total macrocells      ; 13 / 64 ( 20 % )                             ;
+; Total pins            ; 17 / 36 ( 47 % )                             ;
++-----------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                              ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                     ; Setting         ; Default Value ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Device                                                                     ; EPM7064SLC44-10 ;               ;
+; Use smart compilation                                                      ; Off             ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                                ; Off             ; Off           ;
+; Use TimeQuest Timing Analyzer                                              ; Off             ; Off           ;
+; Optimize Timing for ECOs                                                   ; Off             ; Off           ;
+; Regenerate full fit report during ECO compiles                             ; Off             ; Off           ;
+; Optimize IOC Register Placement for Timing                                 ; On              ; On            ;
+; Limit to One Fitting Attempt                                               ; Off             ; Off           ;
+; Fitter Initial Placement Seed                                              ; 1               ; 1             ;
+; Slow Slew Rate                                                             ; Off             ; Off           ;
+; Fitter Effort                                                              ; Auto Fit        ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off             ; Off           ;
+; Use Best Effort Settings for Compilation                                   ; Off             ; Off           ;
++----------------------------------------------------------------------------+-----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/Users/Alumno/Desktop/P4/P4.pin.
+
+
++------------------------------------------------------+
+; Fitter Resource Usage Summary                        ;
++-----------------------------------+------------------+
+; Resource                          ; Usage            ;
++-----------------------------------+------------------+
+; Logic cells                       ; 13 / 64 ( 20 % ) ;
+; Registers                         ; 9 / 64 ( 14 % )  ;
+; Number of pterms used             ; 30               ;
+; User inserted logic elements      ; 0                ;
+; I/O pins                          ; 17 / 36 ( 47 % ) ;
+;     -- Clock pins                 ; 1 / 2 ( 50 % )   ;
+;     -- Dedicated input pins       ; 0 / 2 ( 0 % )    ;
+; Global signals                    ; 1                ;
+; Shareable expanders               ; 0 / 64 ( 0 % )   ;
+; Parallel expanders                ; 1 / 60 ( 2 % )   ;
+; Cells using turbo bit             ; 13 / 64 ( 20 % ) ;
+; Maximum fan-out node              ; clk              ;
+; Maximum fan-out                   ; 9                ;
+; Highest non-global fan-out signal ; reset            ;
+; Highest non-global fan-out        ; 9                ;
+; Total fan-out                     ; 66               ;
+; Average fan-out                   ; 2.20             ;
++-----------------------------------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                       ;
++------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; Name       ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
++------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; clk        ; 43    ; --       ; --  ; 9                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
+; enable     ; 31    ; --       ; 3   ; 0                     ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; f          ; 14    ; --       ; 2   ; 0                     ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; pulsador   ; 37    ; --       ; 4   ; 1                     ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; pulsador_f ; 40    ; --       ; 4   ; 0                     ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
+; reset      ; 41    ; --       ; 4   ; 9                     ; 0                  ; no     ; no             ; TTL          ; Fitter               ;
++------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                       ;
++---------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name          ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++---------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; ambar         ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; cuenta_s[0]   ; 6     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; cuenta_s[1]   ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; cuenta_s[2]   ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; fin_de_cuenta ; 4     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; rojo          ; 12    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; verde         ; 8     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
++---------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 2        ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 3        ; 2          ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 4        ; 3          ; --       ; fin_de_cuenta  ; output ; TTL          ;         ; N               ;
+; 5        ; 4          ; --       ; cuenta_s[1]    ; output ; TTL          ;         ; N               ;
+; 6        ; 5          ; --       ; cuenta_s[0]    ; output ; TTL          ;         ; N               ;
+; 7        ; 6          ; --       ; TDI            ; input  ; TTL          ;         ; N               ;
+; 8        ; 7          ; --       ; verde          ; output ; TTL          ;         ; N               ;
+; 9        ; 8          ; --       ; ambar          ; output ; TTL          ;         ; N               ;
+; 10       ; 9          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 11       ; 10         ; --       ; cuenta_s[2]    ; output ; TTL          ;         ; N               ;
+; 12       ; 11         ; --       ; rojo           ; output ; TTL          ;         ; N               ;
+; 13       ; 12         ; --       ; TMS            ; input  ; TTL          ;         ; N               ;
+; 14       ; 13         ; --       ; f              ; input  ; TTL          ;         ; N               ;
+; 15       ; 14         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 16       ; 15         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 17       ; 16         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 18       ; 17         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 19       ; 18         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 20       ; 19         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 21       ; 20         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 22       ; 21         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 23       ; 22         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 24       ; 23         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 25       ; 24         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 26       ; 25         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 27       ; 26         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 28       ; 27         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 29       ; 28         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 30       ; 29         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 31       ; 30         ; --       ; enable         ; input  ; TTL          ;         ; N               ;
+; 32       ; 31         ; --       ; TCK            ; input  ; TTL          ;         ; N               ;
+; 33       ; 32         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 34       ; 33         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 35       ; 34         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 36       ; 35         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 37       ; 36         ; --       ; pulsador       ; input  ; TTL          ;         ; N               ;
+; 38       ; 37         ; --       ; TDO            ; output ; TTL          ;         ; N               ;
+; 39       ; 38         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 40       ; 39         ; --       ; pulsador_f     ; input  ; TTL          ;         ; N               ;
+; 41       ; 40         ; --       ; reset          ; input  ; TTL          ;         ; N               ;
+; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; clk            ; input  ; TTL          ;         ; N               ;
+; 44       ; 43         ; --       ; GND+           ;        ;              ;         ;                 ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++--------------------------------------------------------------------------------------------------+
+; I/O Standard                                                                                     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; I/O Standard ; Input Vref ; Dedicated Input Pins ; Pins in I/O Bank1 ; Pins in I/O Bank2 ; Total ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; TTL          ; -          ; 1                    ; 0                 ; 0                 ; 1     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Dedicated Inputs I/O                                               ;
++------+-------+-------+-------+--------------+------------+---------+
+; Name ; Pin # ; Type  ; VCCIO ; I/O Standard ; Input Vref ; Current ;
++------+-------+-------+-------+--------------+------------+---------+
+; clk  ; 43    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
++------+-------+-------+-------+--------------+------------+---------+
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; TTL          ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++-------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                               ;
++----------------------------+------------+------+---------------------+--------------+
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+------------+------+---------------------+--------------+
+; |P4                        ; 13         ; 17   ; |P4                 ; work         ;
++----------------------------+------------+------+---------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                            ;
++-------+----------+---------+----------------------------+--------+----------------------+------------------+
+; Name  ; Location ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ;
++-------+----------+---------+----------------------------+--------+----------------------+------------------+
+; clk   ; PIN_43   ; 9       ; Clock                      ; yes    ; On                   ; --               ;
+; reset ; PIN_41   ; 9       ; Async. clear, Clock enable ; no     ; --                   ; --               ;
++-------+----------+---------+----------------------------+--------+----------------------+------------------+
+
+
++---------------------------------------------------------------------+
+; Global & Other Fast Signals                                         ;
++------+----------+---------+----------------------+------------------+
+; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++------+----------+---------+----------------------+------------------+
+; clk  ; PIN_43   ; 9       ; On                   ; --               ;
++------+----------+---------+----------------------+------------------+
+
+
++-----------------------------------+
+; Non-Global High Fan-Out Signals   ;
++-------------------------+---------+
+; Name                    ; Fan-Out ;
++-------------------------+---------+
+; reset                   ; 9       ;
+; e_actual.state_bit_0    ; 8       ;
+; cuenta[1]               ; 7       ;
+; cuenta[0]               ; 7       ;
+; e_actual.state_bit_1    ; 7       ;
+; cuenta[2]               ; 6       ;
+; pulsaf                  ; 4       ;
+; q[1]                    ; 2       ;
+; pulsador                ; 1       ;
+; cuenta~23               ; 1       ;
+; fin_de_cuenta~reg0      ; 1       ;
+; e_actual.state_bit_0~10 ; 1       ;
+; e_actual.a~3            ; 1       ;
+; e_actual.r~3            ; 1       ;
+; q[0]                    ; 1       ;
++-------------------------+---------+
+
+
++-----------------------------------------------+
+; Interconnect Usage Summary                    ;
++----------------------------+------------------+
+; Interconnect Resource Type ; Usage            ;
++----------------------------+------------------+
+; Output enables             ; 0 / 6 ( 0 % )    ;
+; PIA buffers                ; 10 / 144 ( 7 % ) ;
++----------------------------+------------------+
+
+
++----------------------------------------------------------------------+
+; LAB Macrocells                                                       ;
++----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 3.25) ; Number of LABs  (Total = 1) ;
++----------------------------------------+-----------------------------+
+; 0                                      ; 3                           ;
+; 1                                      ; 0                           ;
+; 2                                      ; 0                           ;
+; 3                                      ; 0                           ;
+; 4                                      ; 0                           ;
+; 5                                      ; 0                           ;
+; 6                                      ; 0                           ;
+; 7                                      ; 0                           ;
+; 8                                      ; 0                           ;
+; 9                                      ; 0                           ;
+; 10                                     ; 0                           ;
+; 11                                     ; 0                           ;
+; 12                                     ; 0                           ;
+; 13                                     ; 1                           ;
++----------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parallel Expander                                       ;
++--------------------------+------------------------------+
+; Parallel Expander Length ; Number of Parallel Expanders ;
++--------------------------+------------------------------+
+; 0                        ; 0                            ;
+; 1                        ; 1                            ;
++--------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                            ;
++-----+------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                           ; Output                                                                                                                           ;
++-----+------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC6        ; clk, pulsador, reset                                                                            ; q[0], pulsaf                                                                                                                     ;
+;  A  ; LC7        ; clk, q[1], reset                                                                                ; pulsaf                                                                                                                           ;
+;  A  ; LC8        ; clk, q[1], q[0], reset                                                                          ; e_actual.state_bit_1, cuenta[0], cuenta[1], cuenta~23                                                                            ;
+;  A  ; LC9        ; clk, pulsaf, e_actual.state_bit_0, e_actual.state_bit_1, cuenta[2], cuenta[1], cuenta[0], reset ; e_actual.state_bit_1, e_actual.state_bit_0, e_actual.r~3, e_actual.a~3, cuenta[0], cuenta[1], cuenta~23                          ;
+;  A  ; LC12       ; clk, e_actual.state_bit_1, cuenta[2], cuenta[1], cuenta[0], e_actual.state_bit_0, reset         ; e_actual.state_bit_1, e_actual.state_bit_0, e_actual.r~3, e_actual.a~3, e_actual.state_bit_0~10, cuenta[0], cuenta[1], cuenta~23 ;
+;  A  ; LC1        ; e_actual.state_bit_0, e_actual.state_bit_1                                                      ; rojo                                                                                                                             ;
+;  A  ; LC4        ; e_actual.state_bit_0, e_actual.state_bit_1                                                      ; ambar                                                                                                                            ;
+;  A  ; LC5        ; e_actual.state_bit_0                                                                            ; verde                                                                                                                            ;
+;  A  ; LC11       ; clk, cuenta[2], cuenta[1], cuenta[0], e_actual.state_bit_0, pulsaf, e_actual.state_bit_1, reset ; e_actual.state_bit_1, e_actual.state_bit_0, cuenta[0], cuenta_s[0], cuenta[1], cuenta[2], fin_de_cuenta~reg0                     ;
+;  A  ; LC14       ; clk, e_actual.state_bit_0, pulsaf, e_actual.state_bit_1, cuenta[0], cuenta[1], reset            ; e_actual.state_bit_1, e_actual.state_bit_0, cuenta[0], cuenta[1], cuenta_s[1], cuenta[2], fin_de_cuenta~reg0                     ;
+;  A  ; LC3        ; clk, cuenta~23, cuenta[2], cuenta[1], cuenta[0], reset                                          ; e_actual.state_bit_1, e_actual.state_bit_0, cuenta[0], cuenta[2], cuenta_s[2], fin_de_cuenta~reg0                                ;
+;  A  ; LC16       ; clk, cuenta[2], cuenta[1], cuenta[0], reset                                                     ; fin_de_cuenta                                                                                                                    ;
+;  A  ; LC2        ; e_actual.state_bit_0, pulsaf, e_actual.state_bit_1                                              ; cuenta[2]                                                                                                                        ;
++-----+------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed May 04 10:09:09 2022
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off P4 -c P4
+Info: Selected device EPM7064SLC44-10 for design "P4"
+Info: Quartus II Fitter was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 186 megabytes
+    Info: Processing ended: Wed May 04 10:09:09 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
