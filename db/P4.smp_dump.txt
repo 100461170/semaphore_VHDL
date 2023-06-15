@@ -1,0 +1,7 @@
+
+State Machine - |P4|e_actual
+Name e_actual.state_bit_1 e_actual.state_bit_0 
+e_actual.inicial 0 0 
+e_actual.r 0 1 
+e_actual.a 1 1 
+e_actual.v 1 0 
